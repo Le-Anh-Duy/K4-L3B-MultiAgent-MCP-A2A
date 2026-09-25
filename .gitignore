@@ -29,6 +29,13 @@ dist/*
 *.zip
 *.log
 
+# Raw downloads: Kaggle olistbr/brazilian-ecommerce CSVs + release input zips
+data/raw/
+# MCP snapshots and archived runs are competition payload, like outputs/ and traces/
+data/mcp_samples/
+data/runs/
+data/replay_out/
+
 # Editors and operating systems
 .idea/
 .vscode/

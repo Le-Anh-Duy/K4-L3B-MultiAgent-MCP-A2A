@@ -41,6 +41,7 @@ async def _run(root: Path) -> None:
     trace = TraceWriter(trace_path, contracts)
 
     async with connect_gateway(settings.mcp_endpoint, settings.team_api_key, contracts) as gateway:
+        gateway.snapshot_dir = root / "data" / "mcp_samples"
         discovered_tools = await gateway.list_tools()
         if not discovered_tools:
             raise RuntimeError("MCP Gateway returned no tools")
